@@ -25,7 +25,9 @@ func main(){
 		count_str := request.Form.Get("count")
 		if count_str != "" {
 			if c, err := strconv.Atoi(count_str); err == nil {
-				count = c
+                if c <= 1024 {
+				    count = c
+                }
 			}
 		}
 		alpabet := Alpabet
