@@ -4,6 +4,6 @@ RUN go build -ldflags '-s -w' -o /genname
 
 FROM alpine
 COPY --from=build /genname /usr/bin/genname
-ENTRYPOINT ["/usr/bin/gennname"]
+ENTRYPOINT ["/usr/bin/genname"]
 EXPOSE 8080/tcp
 CMD [""]
